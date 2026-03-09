@@ -6,10 +6,17 @@ def sub(a, b):
     return a - b
 
 
+def realDivi(a, b):
+    if b == 0:
+        return "Error: division by zero"
+    return a / b
+
+
 def menu():
     print("Calculator")
     print("1 - Sum")
     print("2 - Subtraction")
+    print("3 - Real Division")
 
     choice = input("Choose an operation: ")
 
@@ -20,6 +27,8 @@ def menu():
         print("Result:", sum(a, b))
     elif choice == "2":
         print("Result:", sub(a, b))
+    elif choice == "3":
+        print("Result:", realDivi(a, b))
     else:
         print("Invalid choice")
 
